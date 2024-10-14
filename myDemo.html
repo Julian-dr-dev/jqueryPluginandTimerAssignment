@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom FancyBox Demo with Bodie Images</title>
+    <link href="source/jquery.fancybox.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            padding: 10px;
+            background-color: #009688;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #00796b;
+        }
+
+        img {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>FancyBox Image Gallery - Bodie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Demo 1</a></li>
+                <li><a href="demo2.html">Demo 2</a></li>
+                <li><a href="demo3.html">Demo 3</a></li>
+                <li><a href="demo4.html">Demo 4</a></li>
+                <li><a href="demo5.html">Demo 5</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            <a class="fancybox" href="bodie07.jpg" title="Image 1 - Bodie Landscape" rel="gallery">
+                <img src="bodie07.jpg" alt="Photo 1 - Bodie Landscape" width="200px">
+            </a>
+            <a class="fancybox" href="bodie08.jpg" title="Image 2 - Bodie Wooden Wheel" rel="gallery">
+                <img src="bodie08.jpg" alt="Photo 2 - Bodie Wooden Wheel" width="200px">
+            </a>
+            <a class="fancybox" href="bodie09.jpg" title="Image 3 - Bodie Metal Tools" rel="gallery">
+                <img src="bodie09.jpg" alt="Photo 3 - Bodie Metal Tools" width="200px">
+            </a>
+            <a class="fancybox" href="bodie10.jpg" title="Image 4 - Bodie Abandoned Car" rel="gallery">
+                <img src="bodie10.jpg" alt="Photo 4 - Bodie Abandoned Car" width="200px">
+            </a>
+            <a class="fancybox" href="bodie11.jpg" title="Image 5 - Rear View of Car" rel="gallery">
+                <img src="bodie11.jpg" alt="Photo 5 - Rear View of Car" width="200px">
+            </a>
+            <a class="fancybox" href="bodie12.jpg" title="Image 6 - Bodie Metal Pots" rel="gallery">
+                <img src="bodie12.jpg" alt="Photo 6 - Bodie Metal Pots" width="200px">
+            </a>
+        </p>
+
+        <p>This is a custom FancyBox gallery featuring images from the Bodie ghost town. Click on any of the images to view them in a lightbox.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="source/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
